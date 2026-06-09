@@ -1,683 +1,118 @@
 <!DOCTYPE html>
 <html lang="de">
+<!-- HOME -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="bilder/icons8-berg-48.png">
-    <title>Schutzhütte Paolina</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Willkommen!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            min-height: 100vh;
+            background: linear-gradient(rgba(20, 40, 80, 0.5), rgba(30, 60, 110, 0.8)),
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4') center/cover no-repeat fixed;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: white;
+            text-decoration: none;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 16vh 5% 12vh;
+        }
+
+        .hero h1 {
+            font-size: 4.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.45rem;
+            max-width: 620px;
+            margin: 0 auto;
+            opacity: 0.95;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2.2rem;
+            flex-wrap: wrap;
+            padding: 25rem 5% 6rem;
+        }
+
+        .btn {
+            padding: 1.25rem 3.2rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.95);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            transition: all 0.35s ease;
+            backdrop-filter: blur(12px);
+            min-width: 230px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            background: white;
+            color: #1a2e5c09;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 12rem;
+            opacity: 0.85;
+            font-size: 0.95rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Simon</a>
+    </header> 
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo">Paolina <span>Hütte</span></a>
-  <ul class="nav-center">
-    <li><a href="#ueber" class="nav-link">Über uns</a></li>
-    <li><a href="#gaststaette" class="nav-link">Gaststätte</a></li>
-    <li><a href="#unterkunft" class="nav-link">Unterkunft</a></li>
-    <li><a href="#aktivitaeten" class="nav-link">Aktivitäten</a></li>
-    <li><a href="#anreise" class="nav-link">Anreise</a></li>
-    <li><a href="#anfrage" class="nav-link">Anfrage</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang">
-      <a href="#" class="on">DE</a><span>·</span>
-      <a href="#">IT</a><span>·</span>
-      <a href="#">EN</a>
-    </div>
-    <a href="#anfrage" class="nav-cta">Anfragen</a>
-  </div>
-</nav>
-
-<!-- START -->
-<section id="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Karerpass · Rosengarten · Carezza</div>
-    <h1 class="hero-title">Schutzhütte<br><em>Paolina</em></h1>
-    <p class="hero-sub">Herzliche Gastlichkeit am Fuße der Rotwand — seit 1954 in Familienhand</p>
-    <div class="hero-btns">
-      <a href="#unterkunft" class="btn-solid">Zimmer anfragen</a>
-      <a href="#ueber" class="btn-ghost">Mehr entdecken</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Entdecken</span>
-  </div>
-</section>
-
-<!-- U1 -->
-<div class="stripe">
-  <div class="stripe-item"><div class="sv">1954</div><div class="sl">Gegründet</div></div>
-  <div class="stripe-item"><div class="sv">2125m</div><div class="sl">Seehöhe</div></div>
-  <div class="stripe-item"><div class="sv">6</div><div class="sl">Wanderrouten</div></div>
-  <div class="stripe-item"><div class="sv">5</div><div class="sl">Zimmer</div></div>
-  <div class="stripe-item"><div class="sv">40km</div><div class="sl">Skipisten</div></div>
-</div>
-
-<!-- UEBER UNS -->
-<section id="ueber">
-  <div class="sec">
-    <div class="two-col">
-      <div class="img-stack reveal">
-        <img class="img-main" src="bilder/huette-ausen.jpg" alt="Paolinahütte mit Rotwand">
-        <img class="img-inset" src="bilder/gaststaette1.jpg" alt="Gaststätte">
-      </div>
-      <div class="reveal d1">
-        <div class="ueber-badge">🏔 Seit 1954 · Familie Pichler</div>
-        <h2 class="sec-h">Eine Hütte mit<br><em>Geschichte & Herz</em></h2>
-        <p class="p-body">Die Paolinahütte liegt am Fuße der Rotwand, oberhalb des Karerseegebietes, an der Bergstation des Sesselliftes Paolina. Sie ist vom Karerpass und von der Nigerstraße aus über bequeme Wanderwege erreichbar.</p>
-        <p class="p-body">Die Hütte wurde 1954 von Sepp und Anna Pichler errichtet. Seit 1978 wird sie von Sohn Hermann bewirtschaftet. Im Frühjahr 2024 wurde das Gastlokal neugestaltet — modern, aber dem alpinen Charakter treu.</p>
-        <div class="facts">
-          <div class="fact"><div class="fact-n">2 + 3</div><div class="fact-l">Zweibett- & Vierbettzimmer</div></div>
-          <div class="fact"><div class="fact-n">2125m</div><div class="fact-l">ü d. M</div></div>
-          <div class="fact"><div class="fact-n">Carezza</div><div class="fact-l">Skigebiet nebenan</div></div>
-          <div class="fact"><div class="fact-n">Sommer + Winter</div><div class="fact-l">Geöffnet</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- U2 -->
-<div class="para" style="background-image:url('bilder/gaststaette4.png');">
-  <div class="para-inner">
-    <blockquote>„Alle Gerichte werden frisch auf der Hütte zubereitet — mit Südtiroler Herz und regionalen Zutaten."</blockquote>
-    <cite>Schutzhaus Paolina · Rosengarten · Südtirol</cite>
-  </div>
-</div>
-
-<!-- GASTSTAETTE -->
-<section id="gaststaette" class="bg-off">
-  <div class="sec">
-    <div class="two-col rev">
-      <div class="reveal">
-        <span class="sec-tag">Gaststätte & Terrasse</span>
-        <h2 class="sec-h">Herzliche<br><em>Gastlichkeit</em></h2>
-        <p class="sec-lead">In zwei Gastlokalen und auf einer Sonnenterrasse mit herrlicher Aussicht auf den Rosengarten sorgen wir für das leibliche Wohl unserer Gäste.</p>
-        <p class="sec-lead" style="margin-top:13px;">Unser Küchenchef verwöhnt Sie vorwiegend mit Tiroler Spezialitäten — alle Gerichte werden frisch auf der Hütte zubereitet!</p>
-        <div class="gast-tags">
-          <span class="tag">🥩 Südtiroler Spezialitäten</span>
-          <span class="tag">🌿 Frisch & Regional</span>
-          <span class="tag">☀️ Sonnenterrasse</span>
-          <span class="tag">🏔 Panoramablick</span>
-          <span class="tag">🍺 Getränke & Snacks</span>
-        </div>
-      </div>
-      <div class="mosaic reveal d1">
-        <img class="big" src="bilder/gaststaette2.jpg" alt="Gastronomie">
-        <img src="bilder/gaststaette3.jpg" alt="Gastronomie">
-        <img src="bilder/terrasse1.jpg" alt="Gastronomie">
-        <img src="bilder/badezimmer1.jpg" alt="Gastronomie">
-        <img src="bilder/terrasse2.jpg" alt="Gastronomie">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- UNTERKUNFT -->
-<section id="unterkunft">
-  <div class="sec">
-    <div style="text-align:center;margin-bottom:50px;">
-      <span class="sec-tag reveal">Unterkunft</span>
-      <h2 class="sec-h reveal" style="max-width:480px;margin:0 auto;">Schlafen unterm<br><em>Sternenhimmel</em></h2>
-    </div>
-    <div class="room-gal reveal">
-      <img src="bilder/zimmer1.jpg" alt="Vierbettzimmer">
-      <img src="bilder/zimmer2.jpg" alt="Zweibettzimmer">
-      <img src="bilder/zimmer3.jpg" alt="Zweibettzimmer">
-    </div>
-    <div class="two-col" style="align-items:start;margin-top:50px;">
-      <div class="reveal">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:15px;">Komfortabel & Gemütlich</h3>
-        <p class="p-body">Wanderer und Bergsteiger, die in frühen Morgenstunden von der Paolinahütte aus ihre Tour starten wollen, haben die Möglichkeit hier zu übernachten.</p>
-        <p class="p-body">Unseren Gästen stehen <strong>zwei Zweibettzimmer</strong> und <strong>drei Vierbettzimmer</strong> im ersten Stock zur Verfügung. Decken, Federbetten und Bettwäsche sind vorhanden.</p>
-        <p style="font-size:0.9rem;color:var(--text-light);line-height:1.8;font-weight:300;">Ein Hüttenschlafsack, Hausschuhe und ein Handtuch sind erforderlich. WC, Waschraum und zwei Duschen (gegen Gebühr) vorhanden.</p>
-        <p style="margin-top:14px;font-size:0.81rem;color:var(--rust);font-style:italic;">★ Private Hütte — keine Alpenverein-Ermäßigungen.</p>
-      </div>
-      <div class="reveal d1">
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:6px;">Preise Sommer 2026</h3>
-        <p style="font-size:0.8rem;color:var(--text-light);margin-bottom:0;">pro Person · zzgl. Kurtaxe € 1,50 / Tag (ab 14 J.)</p>
-        <div class="price-row">
-          <div class="pbox"><div class="pbox-l">Übernachtung</div><div class="pbox-p">€32</div><div class="pbox-s">pro Person</div></div>
-          <div class="pbox"><div class="pbox-l">mit Frühstück</div><div class="pbox-p">€50</div><div class="pbox-s">pro Person</div></div>
-          <div class="pbox"><div class="pbox-l">Halbpension</div><div class="pbox-p">€73</div><div class="pbox-s">pro Person</div></div>
-        </div>
-        <p style="margin-top:13px;font-size:0.81rem;color:var(--text-light);line-height:1.72;">*Kinder bis 12 Jahre: 20% Ermäßigung.</p>
-        <div style="margin-top:22px;"><a href="#anfrage" class="btn-solid">Jetzt anfragen</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- U3 -->
-<div class="para" style="background-image:url('bilder/skigebiet1.jpg');">
-  <div class="para-inner">
-    <blockquote>Herrliche Skiabfahrten auf 40 km bestens präparierten Pisten der Skiarea Carezza — und abends zurück in die warme Hütte.</blockquote>
-    <cite>Winterfreuden unterm Rosengarten</cite>
-  </div>
-</div>
-
-<!-- AKTIVITAETEN -->
-<section id="aktivitaeten" class="bg-off">
-  <div class="sec">
-    <div style="text-align:center;margin-bottom:14px;">
-      <span class="sec-tag reveal">Aktivitäten</span>
-      <h2 class="sec-h reveal" style="max-width:520px;margin:0 auto 12px;">Natur pur <em>entdecken</em></h2>
-      <p class="sec-lead reveal" style="margin:0 auto;text-align:center;">Das Rosengarten- und Latemargebiet bietet zu jeder <br>Jahreszeit unvergessliche Erlebnisse.</p>
-      <div class="wk"><img src="bilder/wanderkarte1.png" alt="Wanderkarte Carezza" onclick="openLb(this)"></div>
+    <div class="buttons">
+        <a href="projects/paolina/index.html" class="btn">Projekt 1</a>
+        <a href="#" class="btn">Projekt 2</a>
+        <a href="#" class="btn">Projekt 3</a>
     </div>
 
-    <div class="stabs reveal">
-      <div class="stab on" data-tab="sommer">🥾 Sommer · Wanderungen</div>
-      <div class="stab" data-tab="winter">⛷ Winter · Skigebiet</div>
-    </div>
-
-    <!-- SOMMER TAB -->
-    <div class="tab on" id="tab-sommer">
-      <div class="wlist">
-
-        <!-- Route 1 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">01</div>
-              <div>
-                <div class="wname">An den Rosengartensüdhängen</div>
-                <div class="wmeta">
-                  <span class="wp p-g">wenig schwierig</span>
-                  <span class="wp p-x">11 km · 6–8 h</span>
-                  <span class="wp p-b">+/- 1000 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Talstation Paolinalift → Karerpass → Pederivaschwaige → Paolinahütte → Masaréhütte → Talstation Paolinalift</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">11 km</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">2–4 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±1000m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2350m</div><div class="wsk">Höchster Punkt</div></div>
-                <div class="wsb"><div class="wsv">★☆☆</div><div class="wsk">Schwierigkeit</div></div>
-              </div>
-              <p class="wdesc">Startend am Parkplatz der Talstation des Paolina-Sesselliftes führt die Tour längs der Passstraße ostwärts, biegt am Karerpass vor dem Hotel Savoy links in den Weg mit der Markierung Nr. 548 ab 
-                               und steigt mäßig an bis zur Baita M. Pederiva. Von dort in westlicher Richtung (Markierung Nr. 549) zum Christomannos-Denkmal und weiter steil abwärts der Markierung 539 folgend zur Paolinahütte. 
-                               Der Rückweg erfolgt auf dem Weg Nr. 552 zur Masarèhütte, dann weiter auf dem Forstweg Richtung Westen. Für müde gewordene Wanderer bietet sich der Rückweg auf dem Paolinalift ab der Paolinahütte an.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute1/wanderkarte1.jpg" alt="Wanderkarte" onclick="openLb(this)"><div class="wcap">Wanderkarte</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute1/karerpass.jpg" alt="Karerpass" onclick="openLb(this)"><div class="wcap">Karerpass</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute1/fensterturm.jpg" alt="Fensterlturm" onclick="openLb(this)"><div class="wcap">Fensterlturm</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute1/alte-paolinahuette.jpg" alt="Paolinahütte" onclick="openLb(this)"><div class="wcap">Paolinahütte</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Route 2 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">02</div>
-              <div>
-                <div class="wname">Hirzelsteig</div>
-                <div class="wmeta">
-                  <span class="wp p-g">wenig schwierig</span>
-                  <span class="wp p-x">7,5 km · 3–5 h</span>
-                  <span class="wp p-b">+/- 700 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Paolinahütte → Christomannosdenkmal → Rosengartenhütte → Paolinahütte</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">7,5 km</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">3–5 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±700m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2390m</div><div class="wsk">Rosengartenhütte</div></div>
-                <div class="wsb"><div class="wsv">★☆☆</div><div class="wsk">Schwierigkeit</div></div>
-              </div>
-              <p class="wdesc">Der Hirzelweg bietet allen Bergwanderbegeisterten eine nicht allzu anstrengende Tour unter den bizarren Gipfeln des Rosengarten mit fantastischer Aussicht auf die westliche Südtiroler Bergwelt. 
-                               Ausgehend von der Paolinahütte führt die Route auf dem Weg Nr. 539 steil ostwärts zum Christomannosdenkmal, von dort auf dem oberen Steig Nr. 549 zuerst westwärts dann in nördlicher Richtung zur 
-                               Rosengartenhütte. Der Rückweg erfolgt auf dem unteren Hirzelsteig (Nr. 552) leicht absteigend zum Ausgangspunkt.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute2/hohenprofil.jpg" alt="Höhenprofil" onclick="openLb(this)"><div class="wcap">Höhenprofil</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute2/christomannosdenkmal.jpg" alt="Christomannosdenkmal" onclick="openLb(this)"><div class="wcap">Christomannosdenkmal</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute2/masarekamm.jpg" alt="Masarèkamm" onclick="openLb(this)"><div class="wcap">Masarèkamm</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute2/wegweiser.jpg" alt="Wegweiser" onclick="openLb(this)"><div class="wcap">Wegweiser</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Route 3 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">03</div>
-              <div>
-                <div class="wname">Um Masarékamm und Rotwand</div>
-                <div class="wmeta">
-                  <span class="wp p-o">mäßig schwierig</span>
-                  <span class="wp p-x">6,5 km · 3–5 h</span>
-                  <span class="wp p-b">+/- 900 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Paolinahütte → Christomannosdenkmal → Rotwandhütte (Ostertaghütte) → Vajolonpass → Paolinahütte</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">6,5 km</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">3–5 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±900m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2560m</div><div class="wsk">Vajolonpass</div></div>
-                <div class="wsb"><div class="wsv">★★☆</div><div class="wsk">Schwierigkeit</div></div>
-              </div>
-              <p class="wdesc">Die nicht allzu anstrengende Rundwanderung startet bei der Paolinahütte und führt ostwärts auf steilem Weg (Nr. 539) zum Christomannosdenkmal, dann leicht abwärts mit der 
-                               Markierung Nr. 549 zur Rotwandhütte (Ostertaghütte). Von dort in nördlicher Richtung auf dem Weg Nr. 541 bis zur Abzweigung zum Vajolonpass, dann steil der Markierung 
-                               Nr. 551 folgend zur höchsten Wegstelle. Weiter steil abwärts auf etwas rutschigem Steig zum Hirzelsteig und schließlich südwärts zurück zur Paolinahütte.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute3/rotwand.jpg" alt="Rotwand" onclick="openLb(this)"><div class="wcap">Rotwand Abendrot</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute3/malga-soler.jpg" alt="Malga Soler" onclick="openLb(this)"><div class="wcap">Malga Soler</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute3/latemar.jpg" alt="Latemar" onclick="openLb(this)"><div class="wcap">Latemar</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute3/huette.jpg" alt="Hütte" onclick="openLb(this)"><div class="wcap">Paolinahütte</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Route 4 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">04</div>
-              <div>
-                <div class="wname">Rosengarten Südumrundung</div>
-                <div class="wmeta">
-                  <span class="wp p-o">mäßig schwierig</span>
-                  <span class="wp p-x">Ganztages-Tour · 6–9 h</span>
-                  <span class="wp p-b">+/- 1200 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Paolinahütte → Rosengartensüdhang → Rotwandhütte → Vajolonpass → Paolinahütte</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">lang</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">6–9 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±1200m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2500m</div><div class="wsk">Höchster Punkt</div></div>
-                <div class="wsb"><div class="wsv">★★☆</div><div class="wsk">Schwierigkeit</div></div>
-              </div>
-              <p class="wdesc">Eine beeindruckende Rundwanderung entlang der Südhänge des Rosengartens mit wechselnden Perspektiven auf das mächtige Felsmassiv. Die Tour verbindet mehrere Schutzhütten 
-                               und bietet immer wieder atemberaubende Ausblicke auf das Latemargebiet und die umliegenden Dolomitengipfel. Ideal für erfahrene Wanderer, die einen langen Bergtag genießen wollen.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute4/latemar-abendrot.jpg" alt="Latemar Abendrot" onclick="openLb(this)"><div class="wcap">Latemar Abendrot</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute4/latemar.jpg" alt="Latemar" onclick="openLb(this)"><div class="wcap">Latemar</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute4/masarekamm.jpg" alt="Masarèkamm" onclick="openLb(this)"><div class="wcap">Masarèkamm</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute4/karerpass.jpg" alt="Karerpass" onclick="openLb(this)"><div class="wcap">Karerpass</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Route 5 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">05</div>
-              <div>
-                <div class="wname">Rotwandspitze & Masaréklettersteig</div>
-                <div class="wmeta">
-                  <span class="wp p-r">sehr schwierig ⚠ Klettersteig</span>
-                  <span class="wp p-x">6 km · 6–8 h</span>
-                  <span class="wp p-b">+/- 1200 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <div class="warning-bar">⚠ Klettersteigausrüstung erforderlich: Gurt, Karabiner, Helm</div>
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Paolinahütte → Vajolonpass → Rotwandspitze → Masaréklettersteig → Rotwandhütte → Paolinahütte</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">6 km</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">4–6 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±1200m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2806m</div><div class="wsk">Rotwandspitze</div></div>
-                <div class="wsb"><div class="wsv">★★★</div><div class="wsk">Sehr schwierig</div></div>
-              </div>
-              <p class="wdesc">Die Rundwanderung startet bei der Paolinahütte und führt nordwärts leicht ansteigend der Markierung Nr. 552 folgend bis zur Abzweigung zum Vajolonpass, dann in östlicher Richtung 
-                               auf dem steilen Steig Nr. 551. Auf dem gut gesicherten Klettersteig — Ausrüstung unbedingt notwendig — geht's hinauf auf die Rotwandspitze (2806m). Der Abstieg erfolgt zuerst auf 
-                              dem Klettersteig dem Masarékamm entlang, dann in östlicher Richtung zur Rotwandhütte.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute5/rotwand.jpg" alt="Rotwand" onclick="openLb(this)"><div class="wcap">Rotwand</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute5/masarekamm.jpg" alt="Masarèkamm" onclick="openLb(this)"><div class="wcap">Masarèkamm</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute5/fensterlturm.jpg" alt="Fensterlturm" onclick="openLb(this)"><div class="wcap">Fensterlturm</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute5/huettengaudi.jpg" alt="Hüttengaudi" onclick="openLb(this)"><div class="wcap">Hüttengaudi</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Route 6 -->
-        <div class="wi">
-          <div class="wh">
-            <div class="whl">
-              <div class="wnum">06</div>
-              <div>
-                <div class="wname">König Laurins Rosengarten</div>
-                <div class="wmeta">
-                  <span class="wp p-r">sehr schwierig ⚠ Klettersteig</span>
-                  <span class="wp p-x">14 km · 8–12 h</span>
-                  <span class="wp p-b">+/- 2000 m</span>
-                </div>
-              </div>
-            </div>
-            <div class="warr">▾</div>
-          </div>
-          <div class="wb">
-            <div class="wbi">
-              <div class="warning-bar">⚠ Nur für erfahrene Berggeher mit Klettersteigausrüstung und sehr guter Kondition!</div>
-              <p style="font-size:0.76rem;color:var(--text-light);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.1em;">Route</p>
-              <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:0;">Paolinahütte → Rosengartenhütte → Santnerpassklettersteig → Vajolethütte → Zigoladepass → Paolinahütte</p>
-              <div class="wstats">
-                <div class="wsb"><div class="wsv">14 km</div><div class="wsk">Länge</div></div>
-                <div class="wsb"><div class="wsv">8–12 h</div><div class="wsk">Gehzeit</div></div>
-                <div class="wsb"><div class="wsv">±2000m</div><div class="wsk">Höhenmeter</div></div>
-                <div class="wsb"><div class="wsv">2730m</div><div class="wsk">Santnerpass</div></div>
-                <div class="wsb"><div class="wsv">★★★</div><div class="wsk">Sehr schwierig</div></div>
-              </div>
-              <p class="wdesc">Wer eine gute Kondition hat, über Klettersteigerfahrung verfügt und entsprechend ausgerüstet ist, kann sich diese wunderschöne Tour in das Reich von König Laurin 
-                               zwischen der Rosengartenspitze und den Vajolettürmen vornehmen. Von der Paolinahütte auf dem Weg Nr. 552, anschließend Nr. 549 zur Rosengartenhütte. 
-                               Der Santnerpassklettersteig (Markierung S) ist mit Seilen und Leitern gesichert — teils ausgesetzt und steil führt er in König Laurins Rosengarten. Über den Santnerpass, 
-                               an der Gartlhütte vorbei zwischen Rosengartenspitze und Vajolettürmen zur Vajolethütte, dann weiter über den Zigoladepass zurück zur Paolinahütte.</p>
-              <div class="wimgs">
-                <div class="wimgs-wrap"><img src="bilder/wanderroute6/schneelbild.jpg" alt="Schneebild" onclick="openLb(this)"><div class="wcap">Schneebild</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute6/christomannosdenkmal.jpg" alt="Christomannosdenkmal" onclick="openLb(this)"><div class="wcap">Christomannosdenkmal</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute6/latemar.jpg" alt="Latemar" onclick="openLb(this)"><div class="wcap">Latemar</div></div>
-                <div class="wimgs-wrap"><img src="bilder/wanderroute6/karerpass.jpg" alt="Karerpass" onclick="openLb(this)"><div class="wcap">Karerpass</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /wlist -->
-    </div><!-- /tab-sommer -->
-
-    <!-- WINTER TAB -->
-    <div class="tab" id="tab-winter">
-      <div class="wgrid">
-        <div class="wcard">
-          <img class="wc-img" src="bilder/skigebiet-carezza.jpg" alt="Skigebiet Carezza">
-          <div class="wc-body">
-            <div class="wc-ico">⛷</div>
-            <div class="wc-title">Skigebiet Carezza</div>
-            <p class="wc-desc">40 km bestens präparierte Pisten mit 12 Aufstiegsanlagen. Für Anfänger und erfahrene Skifahrer — Carezza bietet für jeden etwas.</p>
-          </div>
-        </div>
-        <div class="wcard">
-          <img class="wc-img" src="bilder/schnee-huette.jpg" alt="Schneehütte">
-          <div class="wc-body">
-            <div class="wc-ico">🥾</div>
-            <div class="wc-title">Winterwanderungen</div>
-            <p class="wc-desc">Fantastische Winterlandschaften im Rosengarten- und Latemargebiet — traumhafte Touren durch tiefverschneite Wälder und über sonnige Hochplateaus.</p>
-          </div>
-        </div>
-        <div class="wcard">
-          <img class="wc-img" src="bilder/abendrot-rotwand.jpg" alt="Abendrot-Rotwand">
-          <div class="wc-body">
-            <div class="wc-ico">🌅</div>
-            <div class="wc-title">Sonnenbäder & Panorama</div>
-            <p class="wc-desc">Sonnenbäder in glasklarer Bergluft auf 1850m. Das Abendrot über Rotwand und Latemar — ein unvergesslicher Anblick von unserer Terrasse.</p>
-          </div>
-        </div>
-      </div>
-      <div class="photo-row">
-        <img src="bilder/abendrot-rotwand.jpg" alt="Abendrot-Rotwand">
-        <img src="bilder/huettengaudi.jpg" alt="Hüttengaudi">
-        <img src="bilder/latemar.jpg" alt="Latemar">
-        <img src="bilder/huette.jpg" alt="Hütte">
-      </div>
-    </div>
-
-  </div><!-- /sec -->
-</section>
-
-<!-- U4 -->
-<div class="para" style="background-image:url('bilder/huette-ausen3.jpg');">
-  <div class="para-inner">
-    <blockquote>Vom Karerpass in ca. 30 Minuten zu Fuß — oder bequem mit dem Sessellift Paolina.</blockquote>
-    <cite>So erreichen Sie uns</cite>
-  </div>
-</div>
-
-<!-- ANREISE / KONTAKT -->
-<section id="anreise">
-  <div class="sec">
-    <div style="text-align:center;margin-bottom:20px;">
-      <span class="sec-tag reveal">Anreise & Kontakt</span>
-      <h2 class="sec-h reveal" style="max-width:460px;margin:0 auto;">So finden Sie<br><em>zu uns</em></h2>
-    </div>
-    <div class="ccs reveal">
-      <div class="cc">
-        <div class="cc-ico">📍</div>
-        <div class="cc-l">Adresse</div>
-        <div class="cc-v">Karerpass 17<br>I-38039 Sèn Jan di Fassa (TN)<br>Trentino · Italien</div>
-      </div>
-      <div class="cc">
-        <div class="cc-ico">📞</div>
-        <div class="cc-l">Telefon</div>
-        <div class="cc-v">
-          Hütte: <a href="tel:+390471612008">+39 0471 612 008</a><br>
-          Mobil: <a href="tel:+393479489641">+39 347 948 9641</a><br>
-          Tal: <a href="tel:+390471613281">+39 0471 613 281</a>
-        </div>
-      </div>
-      <div class="cc">
-        <div class="cc-ico">🚗</div>
-        <div class="cc-l">Anreise</div>
-        <div class="cc-v">Karerpass: ~30 min Fußweg bergauf, oder mit dem Sessellift Paolina (Sommer & Winter).<br><br><a href="https://maps.google.com/?q=Schutzhaus+Paolina" target="_blank" style="color:var(--rust);">→ Google Maps öffnen</a></div>
-      </div>
-    </div>
-    <iframe class="map-frame reveal"
-      src="https://www.google.com/maps?q=46.4155058,11.6146815&z=18&t=k&output=embed"
-      allowfullscreen loading="lazy" title="Karte Schutzhaus Paolina">
-    </iframe>
-  </div>
-</section>
-
-<!-- ANFRAGE -->
-<section id="anfrage" class="bg-light">
-  <div class="sec">
-    <div class="af-grid">
-      <div>
-        <span class="sec-tag reveal">Anfrage</span>
-        <h2 class="sec-h reveal">Ihr Aufenthalt<br><em>beginnt hier</em></h2>
-        <p class="reveal" style="font-size:0.96rem;color:var(--text-mid);line-height:1.88;font-weight:300;">Wir freuen uns auf Ihre Anfrage und melden uns so schnell wie möglich bei Ihnen zurück.</p>
-        <div class="af-detail reveal"><div class="af-ico">📞</div><div><div class="af-ll">Telefon Hütte</div><div class="af-vv"><a href="tel:+390471612008">+39 0471 612 008</a></div></div></div>
-        <div class="af-detail reveal"><div class="af-ico">📱</div><div><div class="af-ll">Mobil Hüttenwirt</div><div class="af-vv"><a href="tel:+393479489641">+39 347 948 9641</a></div></div></div>
-        <div class="af-detail reveal"><div class="af-ico">📘</div><div><div class="af-ll">Facebook</div><div class="af-vv"><a href="https://facebook.com/paolinahuette" target="_blank">facebook.com/paolinahuette</a></div></div></div>
-        <div class="af-detail reveal"><div class="af-ico">📸</div><div><div class="af-ll">Instagram</div><div class="af-vv"><a href="https://instagram.com/rifugio_paolina_huette/" target="_blank">instagram.com/rifugio_paolina_huette</a></div></div></div>
-      </div>
-      <div class="reveal d1">
-        <form class="af-form" onsubmit="handleForm(event)">
-          <input type="text" placeholder="Vorname" required>
-          <input type="text" placeholder="Nachname" required>
-          <input class="full" type="email" placeholder="E-Mail-Adresse" required>
-          <input type="date" title="Anreise">
-          <input type="date" title="Abreise">
-          <select><option value="" disabled selected>Zimmertyp</option><option>Zweibettzimmer</option><option>Vierbettzimmer</option></select>
-          <select><option value="" disabled selected>Verpflegung</option><option>Nur Übernachtung – € 32</option><option>mit Frühstück – € 50</option><option>Halbpension – € 73</option></select>
-          <textarea class="full" placeholder="Anzahl Personen, besondere Wünsche, Fragen..."></textarea>
-          <div class="full"><button type="submit" class="btn-solid" style="width:100%;font-family:'Jost',sans-serif;">Anfrage absenden</button></div>
-          <p style="font-size: 14px;">* Aus organisatorischen Gründen bitten wir höflichst, uns alle Stornierungen sowie jegliche Änderungen der Reservierung unverzüglich mitzuteilen.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="fg">
-    <div>
-      <div class="fb-logo">Schutzhütte <span>Paolina</span></div>
-      <p class="fb-p">Am Fuße der Rotwand, oberhalb des Karerseegebietes. <br> Seit 1954 in Familienhand bewirtschaftet von Hermann Pichler.<br><br>Karerpass 17 · I-38039 Sèn Jan di Fassa · Südtirol · Italien</p>
-    </div>
-    <div class="fc">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#ueber">Über uns</a></li>
-        <li><a href="#gaststaette">Gaststätte</a></li>
-        <li><a href="#unterkunft">Unterkunft</a></li>
-        <li><a href="#aktivitaeten">Wanderungen</a></li>
-        <li><a href="#aktivitaeten">Winterfreuden</a></li>
-        <li><a href="#anfrage">Zimmeranfrage</a></li>
-      </ul>
-    </div>
-    <div class="fc">
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="tel:+390471612008">Hütte: +39 0471 612 008</a></li>
-        <li><a href="tel:+393479489641">Mobil: +39 347 948 9641</a></li>
-        <li><a href="tel:+390471613281">Tal: +39 0471 613 281</a></li>
-        <li><a href="https://www.instagram.com/rifugio_paolina_huette" target="_blank">Instagram</a></li>
-        <li><a href="https://facebook.com/paolinahuette" target="_blank">Facebook</a></li>
-      </ul>
-    </div>
-    <div class="fc">
-      <h4>Partner & Info</h4>
-      <ul>
-        <li><a href="https://carezza.it/de" target="_blank">Ferienregion Carezza</a></li>
-        <li><a href="https://eggental.com/de" target="_blank">Ferienregion Eggental</a></li>
-        <li><a href="https://wetter.provinz.bz.it/de/home" target="_blank">Wetter Südtirol</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="impressum.html">Datenschutz</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fb">
-    <p>© 2026 Schutzhütte Paolina · Familie Pichler · Karerpass, Südtirol</p>
-    <p>hallo</p>
-  </div>
-</footer>
-
-<button id="topBtn" onclick="scrollToTop()">↑</button>
-
-<div id="lb" class="lb" onclick="closeLb()">
-  <span class="lb-x" onclick="closeLb()">×</span>
-  <img id="lb-img">
-</div>
-
-<script>
-// Nav scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => { nav.classList.toggle('solid', scrollY > 50); });
-
-// Scroll Up
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-// Button Scroll
-window.addEventListener("scroll", function () {
-  const btn = document.getElementById("topBtn");
-
-  if (window.scrollY > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-});
-
-// Bigger Pictures
-function openLb(img) {
-  const lb = document.getElementById("lb");
-  const lbImg = document.getElementById("lb-img");
-
-  console.log(img.src); // debug
-  lbImg.src = img.src;
-
-  lb.classList.add("show");
-}
-
-function closeLb() {
-  document.getElementById("lb").classList.remove("show");
-}
-
-// Hero parallax trigger
-window.addEventListener('load', () => { document.getElementById('heroBg').classList.add('loaded'); });
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 80, behavior:'smooth'}); }
-  });
-});
-
-// Reveal
-const revEls = document.querySelectorAll('.reveal');
-new IntersectionObserver((entries) => {
-  entries.forEach((en, i) => {
-    if(en.isIntersecting){ setTimeout(() => en.target.classList.add('vis'), i * 55); }
-  });
-}, {threshold:0.08}).observe
-? (() => { const o = new IntersectionObserver(entries => { entries.forEach((en,i) => { if(en.isIntersecting){ setTimeout(()=>en.target.classList.add('vis'),i*55); } }); },{threshold:0.08}); revEls.forEach(el=>o.observe(el)); })()
-: revEls.forEach(el=>el.classList.add('vis'));
-
-// Accordion
-document.querySelectorAll('.wh').forEach(hdr => {
-  hdr.addEventListener('click', () => {
-    const item = hdr.closest('.wi');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.wi').forEach(i => i.classList.remove('open'));
-    if(!isOpen) item.classList.add('open');
-  });
-});
-
-// Tabs
-document.querySelectorAll('.stab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.stab').forEach(t=>t.classList.remove('on'));
-    document.querySelectorAll('.tab').forEach(c=>c.classList.remove('on'));
-    tab.classList.add('on');
-    document.getElementById('tab-'+tab.dataset.tab).classList.add('on');
-  });
-});
-
-// Form
-function handleForm(e){
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent='✓ Anfrage gesendet — Wir melden uns bald!';
-  btn.style.background='var(--green)';
-  btn.disabled=true;
-  setTimeout(()=>{ btn.textContent='Anfrage absenden'; btn.style.background=''; btn.disabled=false; }, 4000);
-}
-</script>
+    <footer>
+        &copy; 2026 Simon • Alle Rechte vorbehalten.
+    </footer>
 </body>
 </html>
